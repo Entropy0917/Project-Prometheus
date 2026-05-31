@@ -16,3 +16,6 @@ Using [Microk8s](https://canonical.com/microk8s) for cluster\
 Using [Ollama](https://ollama.com)\
 Ai agent is [GemmaE2B](https://deepmind.google/models/gemma/)\
 For gate VPN using [TailScale](https://tailscale.com)
+
+# Hardware Architecture
+<img width="362" height="539" alt="Untitled (1)" src="https://github.com/user-attachments/assets/1475930c-5df6-4159-b022-3e8fe165767a" />
