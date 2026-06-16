@@ -21,4 +21,5 @@ For gate VPN using [TailScale](https://tailscale.com)
 <img width="362" height="539" alt="Untitled (1)" src="https://github.com/user-attachments/assets/1475930c-5df6-4159-b022-3e8fe165767a" />
 
 # Privare Cloud Architecture
-<img width="351" height="721" alt="Microk8s_Private_Cloud_Architecture" src="https://github.com/user-attachments/assets/58e09c8b-0a82-44a1-8dcd-2cc33ae97a34" />
+<img width="401" height="736" alt="cloudArch" src="https://github.com/user-attachments/assets/6d3d46c0-b632-434b-bcd3-c7cf8c6445ff" />
+
