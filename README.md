@@ -8,7 +8,7 @@ A computer cluster project for experimentation and personal use.
 2 X [Dell Latitude 7490](https://www.dell.com/support/manuals/en-us/latitude-14-7490-laptop/latitude_7490_om/technical-specifications?guid=guid-bf51648f-378d-45af-818e-6931ba59d73e&lang=en-us)
 
 # OS
-All nodes use [Ubuntu Server](https://ubuntu.com/download/server)\
+All Worker nodes use [Ubuntu Server](https://ubuntu.com/download/server)\
 All Master nodes use [Ubuntu Desktop](https://ubuntu.com/download/desktop)
 
 # Software
