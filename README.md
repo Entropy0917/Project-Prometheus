@@ -19,39 +19,39 @@ Prometheus is the Titan who gave mortals fire. This project is our fire: computi
 | **Networking** | Isolated NAT'd LAN behind a TP-Link AX1500 travel router + 48-port Cisco Catalyst switch, with QoS and static DHCP reservations |
 | **Remote access** | Tailscale mesh VPN with least-privilege collaborator access |
 | **Storage** | Longhorn distributed block storage behind an authenticated nginx ingress |
-| **Services** | Nextcloud private cloud, Ollama LLM inference (Gemma), and more in the [roadmap](docs/roadmap.md) |
+| **Services** | Nextcloud private cloud, Ollama LLM inference (Gemma), and more in the [roadmap](roadmap.md) |
 
 ## Architecture
 
-Full details, diagrams, and design decisions: **[docs/architecture.md](docs/architecture.md)**
+Full details, diagrams, and design decisions: **[docs/architecture.md](architecture.md)**
 
-- **[Hardware](docs/hardware.md)** : node inventory, roles, and the tiered allocation strategy
-- **[Networking](docs/networking.md)** : how a full cluster network was built inside a dorm room: the router-behind-a-router design, Cisco Catalyst configuration over console cable, QoS, and an OpenWrt rebuild of a dead-firmware consumer router
-- **[Software stack](docs/software-stack.md)** : Kubernetes, storage, ingress, VPN, and application layers
+- **[Hardware](hardware.md)** : node inventory, roles, and the tiered allocation strategy
+- **[Networking](networking.md)** : how a full cluster network was built inside a dorm room: the router-behind-a-router design, Cisco Catalyst configuration over console cable, QoS, and an OpenWrt rebuild of a dead-firmware consumer router
+- **[Software stack](software-stack.md)** : Kubernetes, storage, ingress, VPN, and application layers
 
 ## Problems Solved
 
-Real infrastructure means real failures. Each entry links to a full writeup : see **[docs/challenges.md](docs/challenges.md)**.
+Real infrastructure means real failures. Each entry links to a full writeup : see **[docs/challenges.md](challenges.md)**.
 
 | Challenge | One-line summary |
 |---|---|
-| [No control of the upstream network](docs/challenges.md#running-a-cluster-on-a-network-we-dont-control) | Built an isolated, self-managed network behind a travel router NAT'd to campus Wi-Fi |
-| [Trinity: the node that nuked the cluster](docs/challenges.md#trinity-the-node-that-nuked-the-cluster) | An incomplete control-plane join with a mismatched CA forced (and justified) a full rebuild |
-| [Version skew across the fleet](docs/challenges.md#kubernetes-version-skew-across-the-fleet) | Worker kubelets outran the API server; fixed with cordon → channel refresh → uncordon, zero data loss |
-| [Provisioning dozens of nodes](docs/challenges.md#provisioning-dozens-of-nodes-by-hand) | Universal glob-based netplan config made one file valid on every machine |
-| [The ingress that changed underneath us](docs/challenges.md#the-ingress-controller-that-changed-underneath-us) | The rebuild silently swapped nginx for Traefik; replaced with the upstream nginx controller |
-| [Dead consumer router firmware](docs/challenges.md#reviving-a-linksys-wrt1900ac-with-openwrt) | Flashed OpenWrt onto a Linksys WRT1900AC whose stock firmware couldn't handle modern Wi-Fi |
-| [Choosing MicroK8s over vanilla K8s](docs/challenges.md#choosing-microk8s-over-vanilla-kubernetes) | dqlite tolerates slow eMMC storage far better than etcd |
-| [Lenovo N24 Wi-Fi drivers](docs/challenges.md#lenovo-n24-wi-fi-drivers-on-ubuntu-server) | Diagnosed unsupported Realtek chipsets and engineered around them |
-| [Least-privilege collaborator access](docs/challenges.md#onboarding-a-collaborator-with-tailscale) | Tailscale access scoped to a single node, expressed in policy |
-| [Nextcloud lockout behind NAT](docs/challenges.md#nextcloud-brute-force-lockout-behind-source-nat) | Brute-force protection tripped by source NAT masking client IPs; fixed with proxy-aware IP forwarding |
-| [Distributed AI inference limits](docs/challenges.md#distributed-llm-inference-over-1gbe) | Why 1GbE makes multi-node LLM inference impractical and the architecture that works instead |
+| [No control of the upstream network](challenges.md#running-a-cluster-on-a-network-we-dont-control) | Built an isolated, self-managed network behind a travel router NAT'd to campus Wi-Fi |
+| [Trinity: the node that nuked the cluster](challenges.md#trinity-the-node-that-nuked-the-cluster) | An incomplete control-plane join with a mismatched CA forced (and justified) a full rebuild |
+| [Version skew across the fleet](challenges.md#kubernetes-version-skew-across-the-fleet) | Worker kubelets outran the API server; fixed with cordon → channel refresh → uncordon, zero data loss |
+| [Provisioning dozens of nodes](challenges.md#provisioning-dozens-of-nodes-by-hand) | Universal glob-based netplan config made one file valid on every machine |
+| [The ingress that changed underneath us](challenges.md#the-ingress-controller-that-changed-underneath-us) | The rebuild silently swapped nginx for Traefik; replaced with the upstream nginx controller |
+| [Dead consumer router firmware](challenges.md#reviving-a-linksys-wrt1900ac-with-openwrt) | Flashed OpenWrt onto a Linksys WRT1900AC whose stock firmware couldn't handle modern Wi-Fi |
+| [Choosing MicroK8s over vanilla K8s](challenges.md#choosing-microk8s-over-vanilla-kubernetes) | dqlite tolerates slow eMMC storage far better than etcd |
+| [Lenovo N24 Wi-Fi drivers](challenges.md#lenovo-n24-wi-fi-drivers-on-ubuntu-server) | Diagnosed unsupported Realtek chipsets and engineered around them |
+| [Least-privilege collaborator access](challenges.md#onboarding-a-collaborator-with-tailscale) | Tailscale access scoped to a single node, expressed in policy |
+| [Nextcloud lockout behind NAT](challenges.md#nextcloud-brute-force-lockout-behind-source-nat) | Brute-force protection tripped by source NAT masking client IPs; fixed with proxy-aware IP forwarding |
+| [Distributed AI inference limits](challenges.md#distributed-llm-inference-over-1gbe) | Why 1GbE makes multi-node LLM inference impractical and the architecture that works instead |
 
 ## Skills Demonstrated
 
 Linux system administration (Ubuntu Server & Desktop) · Kubernetes cluster operations and recovery · network design (NAT, DHCP, QoS) · managed switch configuration (Cisco IOS via console) · router firmware (OpenWrt) · mesh VPNs and least-privilege access (Tailscale) · distributed storage (Longhorn) · ingress and authentication · hardware diagnosis and refurbishment · two-person team planning with a Scrum/Kanban workflow · technical documentation
 
-Full breakdown: **[docs/skills.md](docs/skills.md)**
+Full breakdown: **[docs/skills.md](skills.md)**
 
 ## Team
 
@@ -62,11 +62,11 @@ We run the project with a Scrum-inspired workflow on a Kanban board (**To-do →
 
 ## Roadmap
 
-The cluster is a living project (see **[docs/roadmap.md](docs/roadmap.md)** ) for what's deployed, in progress, and planned (including scaling to the full 40 nodes and a monitoring stack).
+The cluster is a living project (see **[docs/roadmap.md](roadmap.md)** ) for what's deployed, in progress, and planned (including scaling to the full 40 nodes and a monitoring stack).
 
 ## Resources & References
 
-Documentation, guides, and tools that made this possible: **[docs/resources.md](docs/resources.md)**
+Documentation, guides, and tools that made this possible: **[docs/resources.md](resources.md)**
 
 ---
 
