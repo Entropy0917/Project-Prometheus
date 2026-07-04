@@ -56,7 +56,7 @@ Full breakdown: **[docs/skills.md](docs/skills.md)**
 ## Team
 
 - **[Chris — Entropy0917](https://github.com/Entropy0917)** — cluster architecture, Kubernetes operations, networking design, and Linux administration across the fleet
-- **[Braxton — BraxtonC360](https://github.com/BraxtonC360)** — deployment, configuration, and troubleshooting partner throughout; deployed and configured the Cisco Catalyst switch via console CLI, and leads physical infrastructure management for the fleet
+- **[Braxton — BraxtonC360](https://github.com/BraxtonC360)** — deployment, configuration, and troubleshooting partner throughout; deployed and configured NextCloud and Cisco Catalyst switch via console CLI, and leads physical infrastructure management for the fleet
 
 We run the project with a Scrum-inspired workflow on a Kanban board (**To-do → In-Progress → Testing → Done**)  the infrastructure changes pass through Testing before they're called Done.
 
