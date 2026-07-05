@@ -19,7 +19,7 @@ Prometheus is the Titan who gave mortals fire. This project is our fire: computi
 | **Networking** | Isolated NAT'd LAN behind a TP-Link AX1500 travel router + 48-port Cisco Catalyst switch, with QoS and static DHCP reservations |
 | **Remote access** | Tailscale mesh VPN with least-privilege collaborator access |
 | **Storage** | Longhorn distributed block storage behind an authenticated nginx ingress |
-| **Services** | Nextcloud private cloud, Ollama LLM inference (Gemma), and more in the [roadmap](roadmap.md) |
+| **Services** | Nextcloud private cloud, Ollama LLM inference (Gemma), full observability stack (Prometheus, Grafana, Loki, Tempo), and more in the [roadmap](roadmap.md) |
 
 ## Architecture
 
@@ -46,6 +46,7 @@ Real infrastructure means real failures. Each entry links to a full writeup : se
 | [Least-privilege collaborator access](challenges.md#onboarding-a-collaborator-with-tailscale) | Tailscale access scoped to a single node, expressed in policy |
 | [Nextcloud lockout behind NAT](challenges.md#nextcloud-brute-force-lockout-behind-source-nat) | Brute-force protection tripped by source NAT masking client IPs; fixed with proxy-aware IP forwarding |
 | [Distributed AI inference limits](challenges.md#distributed-llm-inference-over-1gbe) | Why 1GbE makes multi-node LLM inference impractical and the architecture that works instead |
+| [The observability install that failed five ways](challenges.md#the-observability-install-that-failed-five-different-ways) | Wedged CRD controllers, expired CNI tokens, zombie Helm hooks, a rollout held hostage by a dead node, and a Python-only TLS failure — peeled back one layer at a time |
 
 ## Skills Demonstrated
 

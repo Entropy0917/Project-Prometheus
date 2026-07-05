@@ -29,12 +29,18 @@ A running inventory of skills built through this project, grouped by domain. Eac
 - Ingress controllers: nginx vs. Traefik, upstream bare-metal deployment, basic-auth secrets ([writeup](challenges.md#the-ingress-controller-that-changed-underneath-us))
 - Distributed storage with Longhorn, including replica-safety checks before disruptive operations
 - YAML manifest authoring and workload placement across heterogeneous hardware
+- Kubernetes API machinery: CRD lifecycle (stored vs. Established), API discovery debugging with `api-resources` ([writeup](challenges.md#the-observability-install-that-failed-five-different-ways))
+- Helm internals: chart hooks (pre/post-install), release state, hook-cleanup failure modes and zombie-job forensics
+- Full observability stack deployment: kube-prometheus-stack, Grafana provisioning sidecars, Loki, Tempo
+- CNI (Calico) credential debugging: expired token diagnosis via sandbox-creation failures, `hostNetwork` as a differential
+- DaemonSet rollout mechanics (`maxUnavailable` wedging on unreachable nodes) and safe pod force-deletion / namespace finalization
 
 ## Security
 
 - Least-privilege access design (Tailscale, default-deny)
 - Ingress authentication
 - Debugging application security mechanisms through NAT ([Nextcloud lockout](challenges.md#nextcloud-brute-force-lockout-behind-source-nat))
+- TLS/X.509 internals: certificate extensions (`keyUsage`), strict-validation differences across language runtimes, and reasoned trade-offs when relaxing verification
 
 ## Collaboration & Project Management
 

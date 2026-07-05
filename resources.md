@@ -12,6 +12,8 @@ Everything that taught us something along the way. Add new entries under the mat
 - [Longhorn docs](https://longhorn.io/docs/)
 - [Nextcloud admin manual](https://docs.nextcloud.com/server/latest/admin_manual/)
 - [Ollama](https://ollama.com/)
+- [kube-prometheus-stack Helm chart](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack)
+- [Grafana provisioning docs](https://grafana.com/docs/grafana/latest/administration/provisioning/)
 
 ## Hardware References
 
@@ -26,6 +28,11 @@ Everything that taught us something along the way. Add new entries under the mat
 ## Guides, Threads & Troubleshooting Trails
 
 AI-assisted troubleshooting was a real part of this project's workflow — used the way an engineer uses documentation and a rubber duck, with every fix verified on real hardware.
+
+- [Installing Prometheus in a Kubernetes cluster (IBM TXSeries docs)](https://www.ibm.com/docs/en/txseries/11.1.0?topic=grafana-installing-prometheus-in-kubernetes-cluster) — the starting guide for the observability deployment; superseded by the MicroK8s `observability` addon, but useful orientation on the Prometheus/Grafana architecture
+- [Deploying Helm Charts: The Importance of Installing CRDs First (kislow, Medium)](https://kislow.medium.com/deploying-helm-charts-the-importance-of-installing-crds-first-5beefc2ef215) — what CRDs are and why Helm ordering matters
+- [How to Handle CRDs That Must Be Installed Before Operators (OneUptime)](https://oneuptime.com/blog/post/2026-02-26-argocd-crds-before-operators/view) — the CRD-before-operator ordering problem in depth
+- [Kubernetes CRDs explained (YouTube)](https://www.youtube.com/watch?v=TScDYMym7LA) — video walkthrough of Custom Resource Definitions
 
 
 ## Tools
