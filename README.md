@@ -57,7 +57,7 @@ Full breakdown: **[docs/skills.md](skills.md)**
 ## Team
 
 - **[Chris — Entropy0917](https://github.com/Entropy0917)** — cluster architecture, Kubernetes operations, networking design, and Linux administration across the fleet
-- **[Braxton — BraxtonC360](https://github.com/BraxtonC360)** — TrueNAS/Longhorn storage design, Cisco Catalyst switch via console CLI, Cloudflare Tunnel deployment, Kubernetes operations, Linux/System administration, leads physical infrastructure management
+- **[Braxton — BraxtonC360](https://github.com/BraxtonC360)** — TrueNAS/Longhorn storage design, deployed Cisco Catalyst switch via console CLI, Cloudflare Tunnel deployment, Kubernetes operations, Linux/System administration, leads physical infrastructure management
 
 We run the project with a Scrum-inspired workflow on a Kanban board (**To-do → In-Progress → Testing → Done**)  the infrastructure changes pass through Testing before they're called Done.
 
