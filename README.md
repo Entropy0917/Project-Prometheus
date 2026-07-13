@@ -13,7 +13,7 @@ Prometheus is the Titan who gave mortals fire. This project is our fire: computi
 
 | | |
 |---|---|
-| **Fleet** | 40-node target across Dell Latitude 3340s, Asus BR1100FKAs, and Lenovo N24s, plus supporting machines |
+| **Fleet** | 40-node structure across Dell Latitude 3340s, Asus BR1100FKAs, and Lenovo N24s, plus supporting machines |
 | **Currently deployed** | 8 nodes: control plane `d1`, workers `d2`–`d6`, GPU node `liver`, and `a09` all running Ubuntu 26.04 LTS, MicroK8s v1.35 |
 | **Orchestration** | [MicroK8s](https://microk8s.io/) (chosen over vanilla Kubernetes: see [why](challenges.md#choosing-microk8s-over-vanilla-kubernetes)) |
 | **Networking** | Isolated NAT'd LAN behind a TP-Link AX1500 travel router + 48-port Cisco Catalyst switch, with QoS and static DHCP reservations |
