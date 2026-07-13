@@ -63,7 +63,7 @@ We run the project with a Scrum-inspired workflow on a Kanban board (**To-do →
 
 ## Roadmap
 
-The cluster is a living project (see **[docs/roadmap.md](roadmap.md)** ) for what's deployed, in progress, and planned (including scaling to the full 40 nodes and a monitoring stack).
+The cluster is a living project (see **[docs/roadmap.md](roadmap.md)** ) for what's deployed, in progress, and planned.
 
 ## Resources & References
 
