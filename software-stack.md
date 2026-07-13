@@ -8,6 +8,7 @@
 ## Storage
 
 - **[Longhorn](https://longhorn.io/)**: distributed block storage across cluster nodes, with a web UI protected behind ingress basic-auth.
+- **[TrueNAS](https://www.truenas.com/)**: dedicated NAS providing bulk/backing storage for the cluster, decoupling large-capacity storage from the compute nodes.
 
 ## Ingress & Access
 
